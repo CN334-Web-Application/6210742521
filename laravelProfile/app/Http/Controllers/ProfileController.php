@@ -14,11 +14,11 @@ class ProfileController extends Controller
     public function update(Request $request, $id) {
 
         $request->validate([
-            'intro' => 'required',
+            'name' => 'required',
             ]);
             $profile = Profile::find($id);
-            $profile->intro = $request->intro;
+            $profile->name = $request->name;
             $profile->save();
-            return response()->json(['status' => $Education->save()]);
+            // return response()->json(['status' => $Education->save()]);
     }
 }
