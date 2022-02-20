@@ -23,55 +23,24 @@ function App() {
     <div className="App">
      <h1 className='header-web'>Welcome To My Profile</h1>
      <div className='body-info'>
-      <div className='body'>
+      <div className='body my-img'>
         <img src='./assets/me.jpg' className='img-me'/>
       </div>
       <div className='body'>
         <div className='text-info'>
-          {profile.map((profile,i)=>{
+          {profile.map((profile)=>{
             return(
-              <h2>Name:<br/>{profile.name}</h2>
-            );
-          })}
-        </div>
-        <div className='text-info'>
-          {profile.map((profile,i)=>{
-            return(
-              <h2>Nickname:<br/>
-              {profile.nickname}</h2>
-            );
-          })}
-        </div>
-        <div className='text-info'>
-          {profile.map((profile,i)=>{
-            return(
-              <h2>Email:<br/>
-              {profile.email}</h2>
-            );
-          })}
-        </div>
-        <div className='text-info text-about'>
-          {profile.map((profile,i)=>{
-            return(
-              <h2>About Me:<br/>
-                {profile.about}</h2>
+              <div>
+                <h2><text className='topic-text-info'>Name:</text><br/>{profile.name}</h2>
+                <h2><text className='topic-text-info'>Nickname:</text><br/>{profile.nickname}</h2>
+                <h2><text className='topic-text-info'>Email:</text><br/>{profile.email}</h2>
+                <h2><text className='topic-text-info about-me-texdt-info'>About Me:</text><br/>{profile.about}</h2>
+              </div>
             );
           })}
         </div>
       </div>
      </div>
-     
-     {/* {
-       profile.map((profile, i)=>{
-         return(
-           <h2>
-             {profile.name}
-             {profile.nickname}
-             {profile.email}
-           </h2>
-         );
-       })
-     } */}
     </div>
   );
 }
