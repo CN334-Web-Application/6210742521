@@ -21,8 +21,37 @@ function App() {
 
   return (
     <div className="App">
-     <h1>Connect API Laravel</h1>
-     {
+     <h1 className=''>Welcome to My Profile</h1>
+     <div className='body-info'>
+      <div className='body'>
+        <h2>รูป</h2>
+      </div>
+      <div className='body'>
+      <div className='text-info'>
+        {profile.map((profile,i)=>{
+          return(
+            <h2>{profile.name}</h2>
+          );
+        })}
+      </div>
+      <div className='text-info'>
+        {profile.map((profile,i)=>{
+          return(
+            <h2>{profile.nickname}</h2>
+          );
+        })}
+      </div>
+      <div className='text-info'>
+        {profile.map((profile,i)=>{
+          return(
+            <h2>{profile.email}</h2>
+          );
+        })}
+      </div>
+      </div>
+     </div>
+     
+     {/* {
        profile.map((profile, i)=>{
          return(
            <h2>
@@ -32,7 +61,7 @@ function App() {
            </h2>
          );
        })
-     }
+     } */}
     </div>
   );
 }
