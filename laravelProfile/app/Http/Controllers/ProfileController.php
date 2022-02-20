@@ -15,14 +15,10 @@ class ProfileController extends Controller
 
         $request->validate([
             'name' => 'required',
-            ]);
-            $profile = Profile::find($id);
-            $profile->name = $request->name;
-            $profile->save();
-        $request->validate([
             'email' => 'required',
             ]);
             $profile = Profile::find($id);
+            $profile->name = $request->name;
             $profile->email = $request->email;
             $profile->save();
     }

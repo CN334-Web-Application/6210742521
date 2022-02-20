@@ -21,33 +21,43 @@ function App() {
 
   return (
     <div className="App">
-     <h1 className=''>Welcome to My Profile</h1>
+     <h1 className='header-web'>Welcome To My Profile</h1>
      <div className='body-info'>
       <div className='body'>
-        <h2>รูป</h2>
+        <img src='./assets/me.jpg' className='img-me'/>
       </div>
       <div className='body'>
-      <div className='text-info'>
-        {profile.map((profile,i)=>{
-          return(
-            <h2>{profile.name}</h2>
-          );
-        })}
-      </div>
-      <div className='text-info'>
-        {profile.map((profile,i)=>{
-          return(
-            <h2>{profile.nickname}</h2>
-          );
-        })}
-      </div>
-      <div className='text-info'>
-        {profile.map((profile,i)=>{
-          return(
-            <h2>{profile.email}</h2>
-          );
-        })}
-      </div>
+        <div className='text-info'>
+          {profile.map((profile,i)=>{
+            return(
+              <h2>Name:<br/>{profile.name}</h2>
+            );
+          })}
+        </div>
+        <div className='text-info'>
+          {profile.map((profile,i)=>{
+            return(
+              <h2>Nickname:<br/>
+              {profile.nickname}</h2>
+            );
+          })}
+        </div>
+        <div className='text-info'>
+          {profile.map((profile,i)=>{
+            return(
+              <h2>Email:<br/>
+              {profile.email}</h2>
+            );
+          })}
+        </div>
+        <div className='text-info text-about'>
+          {profile.map((profile,i)=>{
+            return(
+              <h2>About Me:<br/>
+                {profile.about}</h2>
+            );
+          })}
+        </div>
       </div>
      </div>
      
