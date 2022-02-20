@@ -19,6 +19,11 @@ class ProfileController extends Controller
             $profile = Profile::find($id);
             $profile->name = $request->name;
             $profile->save();
-            // return response()->json(['status' => $Education->save()]);
+        $request->validate([
+            'email' => 'required',
+            ]);
+            $profile = Profile::find($id);
+            $profile->email = $request->email;
+            $profile->save();
     }
 }
